@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<!-- <head> -->
+<!--     <meta charset="UTF-8"> -->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!--     <title>QR Code Generator</title> -->
+<!--     <style> -->
+<!--         #qr-code { -->
+<!--             display: block; -->
+<!--             margin: 20px auto; -->
+<!--         } -->
+<!--         #logo-canvas { -->
+<!--             display: none; -->
+<!--         } -->
+<!--     </style> -->
+<!-- </head> -->
+<!-- <body> -->
+<!--     <h1>QR Code Generator</h1> -->
+<!--     <form id="qr-form"> -->
+<!--         <label for="url">URL:</label> -->
+<!--         <input type="text" id="url" name="url" required> -->
+<!--         <br> -->
+<!--         <label for="logo">Logo Image:</label> -->
+<!--         <input type="file" id="logo" name="logo" accept="image/*" required> -->
+<!--         <br> -->
+<!--         <label for="color">QR Code Color:</label> -->
+<!--         <input type="color" id="color" name="color" value="#808080"> -->
+<!--         <br> -->
+<!--         <button type="submit">Generate QR Code</button> -->
+<!--     </form> -->
+<!--     <canvas id="qr-code"></canvas> -->
+<!--     <canvas id="logo-canvas"></canvas> -->
+<!--     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script> -->
+<!--     <script src="index.js"></script> -->
+<!-- </body> -->
+<!-- </html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>QR Code Generator with Logo</h1>
+    <form id="qrForm">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" required><br><br>
+        
+        <label for="logo">Logo Image:</label>
+        <input type="file" id="logo" name="logo" accept="image/*" required><br><br>
+        
+        <label for="color">QR Code Color:</label>
+        <input type="color" id="color" name="color" value="#808080"><br><br>
+
+        <label for="basewidth">Logo size:</label>
+        <input type="number" id="basewidth" name="basewidth" value="50"><br><br>
+        
+        <button type="button" onclick="generateQRCode()">Generate QR Code</button>
+    </form>
+    <h2>Generated QR Code:</h2>
+    <canvas id="qrCanvas"></canvas>
+    <!-- <img id="qrImage" alt="QR Code"> -->
+    
+    <script src="qrcode.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
